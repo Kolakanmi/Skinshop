@@ -1,11 +1,10 @@
 <template>
     <div>
         <div>
-            <img src="../assets/logo.png">
-            <span>{{name}}</span>
-            <span>{{desc}}</span>
+            <img :src=image_url>
+            <span>{{title}}</span>
             <span>{{price}}</span>
-            <button>Add to cart</button>
+            <button @click="() => addToCart({title, id, price, image_url, quantity:1})">Add to cart</button>
         </div>
     </div>
 </template>
@@ -13,9 +12,11 @@
 <script>
     export default {
         name: "SingleProduct",
-        props: {name: String,
+        props: {title: String,
+            id: Number,
             price: Number,
-            desc: String
+            image_url: String,
+            addToCart: Function
         }
     }
 </script>
