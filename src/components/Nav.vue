@@ -1,7 +1,7 @@
 <template>
     <div>
         <p>LUMIN</p>
-        <img @click="toggleCart"/>
+        <img src="../assets/logo.png" @click="() => toggleCart()"/>
     </div>
 </template>
 
