@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <AllCartItems :all-carts="cartItems"/>
-    <Nav/>
+    <AllCartItems :is-cart-visible="isCartVisible" :all-carts="cartItems"/>
+    <Nav :toggle-cart="toggleCart"/>
     <select v-model="filterOption">
       <option value="1">Price: Low to High</option>
       <option value="2">Price: High to Low</option>
@@ -22,7 +22,8 @@ export default {
   data () {
     return {
       filterOption: 1,
-      cartItems: []
+      cartItems: [],
+      isCartVisible: false
     }
   },
   components: {
@@ -42,6 +43,13 @@ export default {
         this.cartItems = this.cartItems.concat(newItem)
       }
 
+    },
+    toggleCart() {
+      if (this.isCartVisible === false) {
+        this.isCartVisible = true
+      } else {
+        this.isCartVisible = false
+      }
     }
   }
 }

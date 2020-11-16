@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div :class="{'sideBarVisible': isCartVisible}">
         <div v-if="allCarts.length === 0">
             <h6>Empty Cart</h6>
         </div>
@@ -18,7 +18,8 @@
         name: "AllCartItems",
         components: {CartItem},
         props: {
-            allCarts: Array
+            allCarts: Array,
+            isCartVisible: Boolean
         }
     }
 </script>
