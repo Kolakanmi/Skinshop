@@ -17,6 +17,9 @@
                     {name: "Toothbrush", price:50, desc: "Good brush"}]
             }
         },
+        apollo: {
+
+        },
         mounted() {
         },
         methods: {
