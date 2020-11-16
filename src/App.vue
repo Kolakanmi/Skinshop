@@ -7,7 +7,6 @@
       <option value="2">Price: High to Low</option>
       <option value="3">Title</option>
     </select>
-    <span>{{filterOption}}</span>
     <AllProducts :option="filterOption" :add-to-cart="addToCart"/>
 
   </div>
