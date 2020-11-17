@@ -1,6 +1,6 @@
 <template>
     <div >
-        <div>
+        <div :class="{'sideBarInvisible': isCartInvisible}">
             <div v-if="allCarts.length === 0">
                 <h6>Empty Cart</h6>
             </div>

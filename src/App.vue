@@ -46,10 +46,10 @@ export default {
 
     },
     toggleCart() {
-      if (this.isCartVisible === false) {
-        this.isCartVisible = true
+      if (this.isCartInvisible === false) {
+        this.isCartInvisible = true
       } else {
-        this.isCartVisible = false
+        this.isCartInvisible = false
       }
     }
   }
