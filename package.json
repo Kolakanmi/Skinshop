@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "HOST=localhost vue-cli-service serve",
+    "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "apollo": "vue-cli-service apollo:dev --generate-schema",
@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
+    "eslint-loader": "^4.0.2",
     "graphql-type-json": "^0.2.1",
     "lowdb": "^1.0.0",
     "mkdirp": "^0.5.1",
@@ -29,6 +30,8 @@
     "eslint-plugin-graphql": "^2.1.1",
     "eslint-plugin-vue": "^6.2.2",
     "graphql-tag": "^2.9.0",
+    "node-sass": "^5.0.0",
+    "sass-loader": "^10.1.0",
     "vue-cli-plugin-apollo": "~0.22.2",
     "vue-template-compiler": "^2.6.11"
   },
@@ -44,16 +47,7 @@
     "parserOptions": {
       "parser": "babel-eslint"
     },
-    "rules": {
-      "graphql/template-strings": [
-        "error",
-        {
-          "env": "literal",
-          "projectName": "app",
-          "schemaJsonFilepath": "node_modules/.temp/graphql/schema.json"
-        }
-      ]
-    },
+    "rules": {},
     "plugins": [
       "graphql"
     ]
