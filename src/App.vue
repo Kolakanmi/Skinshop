@@ -36,6 +36,7 @@ export default {
       let existingItem = this.cartItems.find(x => x.id === newItem.id);
       if (existingItem !== undefined){
         existingItem.quantity += 1;
+        existingItem.price *= existingItem.quantity;
         let index = this.cartItems.indexOf(existingItem);
         let oldCartItems = [...this.cartItems.slice(0, index), ...this.cartItems.slice(index+1, this.cartItems.length)];
         this.cartItems = oldCartItems.concat(existingItem)
